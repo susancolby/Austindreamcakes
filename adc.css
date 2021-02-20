@@ -1,0 +1,71 @@
+#title {
+  color: black;
+  font-family: "Sofia", sans-serif;
+  font-weight: bold;
+  text-align: left;
+  background-color: #66ccff;
+  font-size:40px;
+  margin-top:10px;
+  margin-bottom:10px;
+  }
+  
+    .selections {
+  color: black;
+  font-family:"Helvetica", sans-serif;
+  font-size:30px;
+  font-family: "Sofia", sans-serif;
+  
+  }
+  #selections-table {
+  text-align:left;
+  width:100%;
+  background-color: #66ccff;
+  }
+  a:hover {
+  color:#fa7dce;
+  }
+  a {
+  color:black;
+  }
+  
+  #contact-info {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  font-family:"Helvetica", sans-serif;
+  margin-top:10px;
+  position:static;
+  }
+  
+  #about-p {
+  color: black;
+  font-family:"Helvetica", sans-serif;
+  width:50%;
+  float:left;
+  text-align:justify;
+  }
+  #about-h {
+  color: black;
+  font-family:"Helvetica", sans-serif;
+  width:50%;
+  margin:10px;
+  }
+  #about {
+  background-width:50%;
+  margin:10px;
+  text-align:left;
+  }
+  
+   #about-t {
+  background-color: #66ccff;
+  margin:10px;
+  position:fixed;
+  width:100%;
+  bottom:0;
+  }
+  #follow-us {
+  color: black;
+  font-family:"Helvetica", sans-serif;
+  width:50%
+  text-align:center;
+  margin-right:100px;

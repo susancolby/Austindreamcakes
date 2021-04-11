@@ -1,23 +1,64 @@
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<!DOCTYPE html>
+<html>
+  <head>
+  
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyABz-5NX1kec_MVuiaElqH3aNAZJ0kAH7E",
-    authDomain: "austin-dreamcakes.firebaseapp.com",
-    projectId: "austin-dreamcakes",
-    storageBucket: "austin-dreamcakes.appspot.com",
-    messagingSenderId: "868172224006",
-    appId: "1:868172224006:web:a80db41fc2ed00f907d587",
-    measurementId: "G-P0V21652P9"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyABz-5NX1kec_MVuiaElqH3aNAZJ0kAH7E",
+        authDomain: "austin-dreamcakes.firebaseapp.com",
+        projectId: "austin-dreamcakes",
+        storageBucket: "austin-dreamcakes.appspot.com",
+        messagingSenderId: "868172224006",
+        appId: "1:868172224006:web:a80db41fc2ed00f907d587",
+        measurementId: "G-P0V21652P9"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+
+	  function saveToFirebase(email) {
+      var emailObject = {
+          email: email
+      };
+
+      firebase.database().ref('subscription-entries').push().set(emailObject)
+          .then(function(snapshot) {
+              console.log('success');
+          }, function(error) {
+              console.log('error' + error);
+              error(); // some error method
+          });
+      }
+	</script>
+	
+  </head>
+  
+<body>
+
+  <div class="container">
+    <header class="header">
+	  Test!!
+	</header>
+    <form id="myform" action="" method="GET">Input:
+	  <input type="email" id="inputbox" value="">
+	</form>
+  </div> <!-- /container -->
+  
+  <button onclick="getElementById('test').innerHTML = Date()">Click to show date</button>
+  <p id=test> </p>
+
+  <button onclick="saveToFirebase(myform.inputbox.value)">Click to write to DB</button>
+  
+
+</body>
+</html>

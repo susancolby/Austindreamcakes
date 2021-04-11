@@ -12,4 +12,4 @@ function saveToFirebase(email) {
         });
 }
 
-saveToFirebase(email);
+
